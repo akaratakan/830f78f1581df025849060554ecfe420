@@ -53,17 +53,17 @@ class SpaceShipFragment : BaseFragment() {
                 showErrorDialog(getString(R.string.enter_name_warn_text))
             }
         }
-        binding.velocityBar.addOnChangeListener { _, value, fromUser ->
+        binding.velocityBar.addOnChangeListener { _, value, _ ->
             binding.velocityCount.text = value.toInt().toString()
             binding.applyButton.isEnabled = isTotalPointValid()
             viewModel.totalPoint.postValue(TOTAL_SPECIAL_POINT.minus((getTotalPointFromUser())))
         }
-        binding.capacityBar.addOnChangeListener { slider, value, fromUser ->
+        binding.capacityBar.addOnChangeListener { _, value, _ ->
             binding.capacityCount.text = value.toInt().toString()
             binding.applyButton.isEnabled = isTotalPointValid()
             viewModel.totalPoint.postValue(TOTAL_SPECIAL_POINT.minus(getTotalPointFromUser()))
         }
-        binding.strengthBar.addOnChangeListener { slider, value, fromUser ->
+        binding.strengthBar.addOnChangeListener { _, value, _ ->
             binding.strengthCount.text = value.toInt().toString()
             binding.applyButton.isEnabled = isTotalPointValid()
             viewModel.totalPoint.postValue(TOTAL_SPECIAL_POINT.minus(getTotalPointFromUser()))

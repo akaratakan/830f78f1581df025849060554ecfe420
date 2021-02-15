@@ -26,7 +26,7 @@ val onFavouriteClicked: (StationListResponseObjectItem) -> Unit
     inner class FavouriteItemHolder(val binding: ItemFavouriteBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: StationListResponseObjectItem, position: Int) {
+        fun bind(item: StationListResponseObjectItem) {
 
             binding.stationName.text = item.name
             binding.stationCoordinate.text = roundOfDecimal(getDistance(item))
@@ -48,7 +48,7 @@ val onFavouriteClicked: (StationListResponseObjectItem) -> Unit
 
     override fun onBindViewHolder(holder: FavouriteItemHolder, position: Int) {
         val item = movieList[position]
-        holder.bind(item, position)
+        holder.bind(item)
     }
 
 

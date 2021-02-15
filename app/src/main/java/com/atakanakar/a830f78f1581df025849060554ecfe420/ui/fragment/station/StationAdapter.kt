@@ -17,7 +17,6 @@ import kotlin.math.sqrt
  * Created by atakanakar on 11.02.2021.
  */
 
-
 class StationAdapter(
     private val movieList: MutableList<StationListResponseObjectItem>,
     val currentLocationX: Double,
@@ -29,7 +28,7 @@ class StationAdapter(
     inner class StationItemHolder(val binding: ItemStationBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: StationListResponseObjectItem, position: Int) {
+        fun bind(item: StationListResponseObjectItem) {
 
             binding.stationName.text = item.name
             binding.stationCoordinate.text = roundOfDecimal(getDistance(item))
@@ -66,7 +65,7 @@ class StationAdapter(
 
     override fun onBindViewHolder(holder: StationItemHolder, position: Int) {
         val item = movieList[position]
-        holder.bind(item, position)
+        holder.bind(item)
     }
 
 
