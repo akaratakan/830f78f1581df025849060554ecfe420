@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <action
+        android:id="@+id/action_to_favouriteFragment"
+        app:destination="@id/favouriteFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_stationFragment"
+        app:destination="@id/stationFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.atakanakar.a830f78f1581df025849060554ecfe420.ui.fragment.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_spaceShipFragment"
+            app:destination="@id/spaceShipFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/stationFragment"
+        android:name="com.atakanakar.a830f78f1581df025849060554ecfe420.ui.fragment.station.StationFragment"
+        android:label="StationFragment"
+        tools:layout="@layout/fragment_station"/>
+    <fragment
+        android:id="@+id/spaceShipFragment"
+        android:name="com.atakanakar.a830f78f1581df025849060554ecfe420.ui.fragment.spaceship.SpaceShipFragment"
+        android:label="SpaceShipFragment"
+        tools:layout="@layout/fragment_space_ship">
+
+        <action
+            android:id="@+id/action_spaceShipFragment_to_stationFragment"
+            app:destination="@id/stationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.atakanakar.a830f78f1581df025849060554ecfe420.ui.fragment.favourite.FavouriteFragment"
+        android:label="FavouriteFragment"
+        tools:layout="@layout/fragment_favourite"/>
+</navigation>

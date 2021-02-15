@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">830f78f1581df025849060554ecfe420</string>
+    <string name="test">test</string>
+    <string name="ok">Okay</string>
+    <string name="error">Error</string>
+    <string name="error_content">An error occurred.</string>
+    <string name="velocity">Velocity:</string>
+    <string name="strength">Strength:</string>
+    <string name="total_point_info_text">You have %1$d point.\nAnd each attribute must be greater than 0.</string>
+    <string name="spaceship_name">Name: %1$s</string>
+    <string name="spaceship_health">Health: %1$d </string>
+    <string name="spaceship_ugs">%1$d UGS</string>
+    <string name="spaceship_eus">%1$d EUS</string>
+    <string name="spaceship_ds">%1$d DS</string>
+    <string name="planet_name">Planet Name</string>
+    <string name="enter_name_warn_text">Please enter a name</string>
+    <string name="planet">Planet:</string>
+    <string name="distance">Distance:</string>
+    <string name="capacity">Capacity:</string>
+    <string name="stock">Stock:</string>
+    <string name="travel">Travel</string>
+    <string name="material_capacity">Material Capacity:</string>
+    <string name="give_a_name_to_your_ship">Give a name to your ship</string>
+    <string name="make_your_space_ship">Make your space ship</string>
+    <string name="apply">Apply</string>
+</resources>
